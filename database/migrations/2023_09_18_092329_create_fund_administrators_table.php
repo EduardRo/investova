@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('fund_administrators', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('company');
             $table->string('country');
             $table->string('city');
             $table->text('address');

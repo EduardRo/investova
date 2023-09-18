@@ -20,4 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/fonduri', [FundController::class, 'index']);
+Route::get('/fonduri/allinfo', [FundController::class, 'allinfo']);
 Route::get('/fonduri/{id}', [FundController::class, 'show']);

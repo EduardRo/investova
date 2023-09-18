@@ -13,4 +13,9 @@ class Fund extends Model
     {
         return $this->belongsTo(FundAdministrator::class);
     }
+
+    public function administrator()
+    {
+        return $this->belongsTo(FundAdministrator::class, 'fund_administrator_id', 'id');
+    }
 }

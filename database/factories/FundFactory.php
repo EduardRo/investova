@@ -19,7 +19,7 @@ class FundFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->company,
+            'fund_name' => $this->faker->company,
             'category' => $this->faker->company,
             'fund_administrator_id' => FundAdministrator::factory(),
             'phone' => $this->faker->phoneNumber,

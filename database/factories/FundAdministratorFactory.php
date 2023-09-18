@@ -17,7 +17,7 @@ class FundAdministratorFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->company,
+            'company' => $this->faker->company,
             'country' => $this->faker->country,
             'city' => $this->faker->city,
             'address' => $this->faker->address(),
