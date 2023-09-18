@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Fund;
 use Illuminate\Http\Request;
+use App\Models\FundAdministrator;
 
 class FundController extends Controller
 {
@@ -12,8 +13,19 @@ class FundController extends Controller
      */
     public function index()
     {
-        //
+        $fonduri = Fund::all();
+        return response()->json($fonduri);
     }
+
+    /**
+     * Display a listing of the resource.
+     */
+    public function allinfo()
+    {
+        $fonduri = Fund::all();
+        return response()->json($fonduri);
+    }
+
 
     /**
      * Store a newly created resource in storage.
@@ -26,9 +38,10 @@ class FundController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Fund $fund)
+    public function show($id)
     {
-        //
+        $fond = Fund::find($id);
+        return response()->json($fond);
     }
 
     /**
