@@ -20,7 +20,7 @@ class FundFactory extends Factory
     {
         return [
             'fund_name' => $this->faker->company,
-            'category' => $this->faker->company,
+            'category' => rand(1, 4),
             'fund_administrator_id' => FundAdministrator::factory(),
             'phone' => $this->faker->phoneNumber,
             'contact_person' => $this->faker->name,

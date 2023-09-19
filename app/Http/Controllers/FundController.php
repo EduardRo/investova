@@ -26,9 +26,27 @@ class FundController extends Controller
     {
 
 
-        $query = "SELECT funds.*, fund_administrators.* FROM
+        /* $query = "SELECT funds.*, fund_administrators.* FROM
         funds LEFT JOIN
-        fund_administrators ON funds.fund_administrator_id = fund_administrators.id;";
+        fund_administrators ON funds.fund_administrator_id = fund_administrators.id;"; */
+        $query = "
+        SELECT
+            funds.*,
+            fund_administrators.*,
+            fund_categories.*
+        FROM
+            funds
+        LEFT JOIN
+            fund_administrators
+        ON
+            funds.fund_administrator_id = fund_administrators.id
+        LEFT JOIN
+            fund_categories
+        ON
+            funds.category = fund_categories.id
+        ";
+
+        //$results = DB::select($query);
 
         $fonduri = DB::select($query);
         return response()->json($fonduri);
