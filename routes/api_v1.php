@@ -14,15 +14,14 @@ use App\Http\Controllers\FundController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-
-Route::get('/', function () {
-    return 'this is version 000';
-});
-
+/* 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
-});
+}); */
 
-Route::get('/fonduri', [FundController::class, 'index']);
-Route::get('/fonduri/allinfo', [FundController::class, 'allinfo']);
-Route::get('/fonduri/{id}', [FundController::class, 'show']);
+Route::get('/', function () {
+    return "this is v1 version of the api";
+});
+Route::get('/test', function () {
+    return "TEST of the v1 version of the api";
+});
